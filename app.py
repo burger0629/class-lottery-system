@@ -3,7 +3,7 @@ import random
 import time
 
 # 設定網頁標題與排版
-st.set_page_config(page_title="期班抽獎系統", page_icon="🎯", layout="centered")
+st.set_page_config(page_title="抽獎系統", page_icon="🎯", layout="centered")
 
 # 初始化所有的系統記憶
 if 'namelist' not in st.session_state:
