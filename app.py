@@ -24,7 +24,7 @@ with st.sidebar:
     if admin_pwd == "cafa116010":
         st.divider()
         if st.session_state.page_mode == "main":
-            if st.button("前往機率調整頁面 🤫", type="primary", use_container_width=True):
+            if st.button("前往調整頁面 ", type="primary", use_container_width=True):
                 st.session_state.page_mode = "admin"
                 st.rerun() # 重新刷新畫面
         else:
@@ -36,13 +36,13 @@ with st.sidebar:
 # 畫面 B：機率調整專屬頁面 (完全獨立顯示)
 # ====================
 if st.session_state.page_mode == "admin":
-    st.title("🤫 特定人士機率調整後台")
+    st.title("調整後台")
     st.info("此頁面完全獨立於主畫面。設定完畢後，請點擊左側按鈕「返回抽獎主畫面」。")
     
     if len(st.session_state.namelist) == 0:
-        st.warning("⚠️ 請先在主畫面匯入期班名單，系統才有資料可以調整機率！")
+        st.warning("⚠️ 請先在主畫面匯入名單，系統才有資料可以調整機率！")
     else:
-        special_people = st.multiselect("選擇要特別調整機率的人員", options=st.session_state.namelist)
+        special_people = st.multiselect("選擇要調整的人員", options=st.session_state.namelist)
         
         new_weights = {}
         for person in special_people:
