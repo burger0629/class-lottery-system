@@ -60,7 +60,7 @@ if st.session_state.page_mode == "admin":
 # 畫面 A：正常的抽獎主網頁
 # ====================
 elif st.session_state.page_mode == "main":
-    st.title("🎯 期班專屬抽獎系統")
+    st.title("抽獎系統")
     
     # 上半部：將名單匯入與人數設定並排顯示
     col1, col2 = st.columns(2)
